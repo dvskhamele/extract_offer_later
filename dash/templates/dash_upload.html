@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <article id="main-content" role="main">  
+    <section class="container">
+       <div class="row">
+          <div class="col-md-4">
+            <header>
+              <h1>Offer Later Key Demo</h1>
+            </header>
+            <p class="lead">Here the user will just have to upload the file and he will get the required keywords in one line.</p>
+          </div>
+      <div class="col-md-8">
+      	<form enctype="multipart/form-data" action="" method="POST">
+      		{% csrf_token %}
+        <p>&nbsp;</p>
+        <h3 class="text-info">Simple offer later input</h3>
+        
+        <!--file input example -->
+        <span class="control-fileupload">
+          <label for="file">Choose a file :</label>
+          <input name="later" type="file" id="file">
+          <button type="submit">submit</button>
+        </span>
+        <!--./file input example -->
+        <h3>Person Name : {{ person_name }}</h3>
+        <h3>Director : {{ director }}</h3>
+        
+        <h3>Salary: {{ salary }}</h3>
+        <h3>Time:
+        {% for time in times|slice:":2" %}
+        {{ time }}
+        {% endfor %}</h3>
+        <h3>Date Of Joining: {{ date }}</h3>
+
+    </form>
+        <hr>
+</article>
+</div>
+
+</body>
+</html>

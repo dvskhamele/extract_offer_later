@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <article id="main-content" role="main">  
+    <section class="container">
+       <div class="row">
+          <div class="col-md-4">
+            <header>
+              <h1>Offer Later Key Demo</h1>
+            </header>
+            <p class="lead">Here the user will just have to upload thee file and he will get the required keywords in one line.</p>
+          </div>
+      <div class="col-md-8">
+        <p>&nbsp;</p>
+        <h3 class="text-info">Example 1 : simple file input</h3>
+        
+        <!--file input example -->
+        <span class="control-fileupload">
+          <label for="file">Choose a file :</label>
+          <input type="file" id="file">
+        </span>
+        <!--./file input example -->
+        <p>&nbsp;</p>
+        <hr>
+        <hr>
+        <h4>How to use it :</h4>
+        <!--./image file upoad sample-->
+        <p>To enable styling of the file input, we need to wrap it with a &lt;div&gt; or a &lt;span&gt; with a <code>input-fileupload</code> class. Just add a <code>label</code> before the input and you're ready.</p>
+				<pre style="background-color: #FFF;">
+&lt;span class="control-fileupload"&gt;
+  &lt;label for="fileInput"&gt;Choose a file :&lt;/label&gt;
+  &lt;input type="file" id="fileInput"&gt;
+&lt;/span&gt;</pre>
+				<br />
+				<p>A simple javascript detects changes and fills the label with the value of the input :</p>
+				<pre style="background-color: #FFF;">
+$(function() {
+  $('input[type=file]').change(function(){
+    var t = $(this).val();
+    var labelText = 'File : ' + t.substr(12, t.length);
+    $(this).prev('label').text(labelText);
+  })
+});</pre>
+				<br />
+				<hr />
+      </div>
+    </div>
+  </section>
+</article>
+</div>
+
+</body>
+</html>
