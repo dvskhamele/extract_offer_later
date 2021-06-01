@@ -139,7 +139,7 @@ traitlets==4.3.2
 Twisted==17.9.0
 txaio==2.9.0
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 vine==1.1.4
 virtualenv==15.1.0
 vpnotebook==0.1.3
